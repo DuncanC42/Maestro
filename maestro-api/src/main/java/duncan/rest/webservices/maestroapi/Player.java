@@ -1,9 +1,11 @@
 package duncan.rest.webservices.maestroapi;
 
 public class Player {
+    long id;
     String pseudo;
 
-    public Player(String pseudo) {
+    public Player(long id, String pseudo) {
+        this.id = id;
         this.pseudo = pseudo;
     }
 
@@ -17,10 +19,19 @@ public class Player {
         this.pseudo = pseudo;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
-                "pseudo='" + pseudo + '\'' +
+                "id=" + id +
+                ", pseudo='" + pseudo + '\'' +
                 '}';
     }
 }
